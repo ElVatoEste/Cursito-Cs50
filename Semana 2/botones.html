@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title >Botonesss</title>
+
+    <style>
+        button{
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+            background-color: green;
+        }
+
+        button:hover{
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+    
+    <div id="move-randomly">
+        <button>Try to click!</button>
+    </div>
+
+</body>
+
+<script>
+    let move = document.querySelector("#move-randomly");
+        move.addEventListener("mouseover", function(e) {
+            console.log(move);
+            let min = 50;
+            move.style.position = "fixed";
+            move.style.left = (Math.random() * (100- min) + min) + "px";
+            move.style.top = (Math.random() * (100 - min) + min) + "px";
+            
+        });
+</script>
+
+</html>
